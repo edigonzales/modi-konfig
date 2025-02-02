@@ -1,0 +1,16 @@
+{
+    "@type" : "XX_SO_AGI_Metadaten_20250202.Metadaten.Datensatz",
+    "ID" : "ch.so.mfk.fahrzeugbestand",
+    "Titel" : "Fahrzeugbestand",
+    "Beschreibung" : "Fahrzeugbestand seit 1991 im Kanton Solothurn gruppiert in verschiedene Kategorien. Wird jährlich aktualisiert.",
+    "Datenherr" : "ch.so.mfk",
+    "Modell" : "SO_MFK_Fahrzeugbestand_20250201",
+    "Tags" : [
+        "Fahrzeug",
+        "Bestand",
+        "PKW",
+        "Auto",
+        "Lastwagen",
+        "Anzahl"
+    ] 
+}

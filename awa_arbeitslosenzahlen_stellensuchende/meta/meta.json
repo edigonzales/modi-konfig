@@ -1,0 +1,13 @@
+{
+    "@type" : "XX_SO_AGI_Metadaten_20250202.Metadaten.Datensatz",
+    "ID" : "ch.so.awa.arbeitslosenzahlen_stellensuchende",
+    "Titel" : "Stellensuchende (Arbeitslosenzahlen)",
+    "Beschreibung" : "Stellensuchende (pro Jahr) nach Geschlecht, Staatszugehörigkeit und Alter. Seit 2004, wird jährlich nachgefgeführt.",
+    "Datenherr" : "ch.so.awa",
+    "Modell" : "SO_AWA_Arbeitslosenzahlen_Stellensuchende_20250201",
+    "Tags" : [
+        "arbeitslos",
+        "Anzahl",
+        "stellensuchend"
+    ]
+}

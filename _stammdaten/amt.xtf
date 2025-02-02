@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ili:transfer xmlns:ili="http://www.interlis.ch/xtf/2.4/INTERLIS" xmlns:geom="http://www.interlis.ch/geometry/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SO_AGI_Metadaten_20250202="http://www.interlis.ch/xtf/2.4/SO_AGI_Metadaten_20250202">
+  <ili:headersection>
+    <ili:models>
+      <ili:model>SO_AGI_Metadaten_20250202</ili:model>
+    </ili:models>
+    <ili:sender>ili2gpkg-5.2.1-dc243af1c55ecb4d26bab25c6a1c183766fc1bea</ili:sender>
+  </ili:headersection>
+  <ili:datasection>
+    <SO_AGI_Metadaten_20250202:Amt ili:bid="SO_AGI_Metadaten_20250202.Amt">
+      <SO_AGI_Metadaten_20250202:Amt.Amt ili:tid="ch.so.mfk">
+        <SO_AGI_Metadaten_20250202:Name>Motorfahrzeugkontrolle</SO_AGI_Metadaten_20250202:Name>
+        <SO_AGI_Metadaten_20250202:Abkuerzung>MFK</SO_AGI_Metadaten_20250202:Abkuerzung>
+        <SO_AGI_Metadaten_20250202:AmtImWeb>https://mfk.so.ch</SO_AGI_Metadaten_20250202:AmtImWeb>
+        <SO_AGI_Metadaten_20250202:Strasse>Gurzelenstrasse</SO_AGI_Metadaten_20250202:Strasse>
+        <SO_AGI_Metadaten_20250202:Hausnr>3</SO_AGI_Metadaten_20250202:Hausnr>
+        <SO_AGI_Metadaten_20250202:PLZ>4512</SO_AGI_Metadaten_20250202:PLZ>
+        <SO_AGI_Metadaten_20250202:Ort>Bellach</SO_AGI_Metadaten_20250202:Ort>
+      </SO_AGI_Metadaten_20250202:Amt.Amt>
+      <SO_AGI_Metadaten_20250202:Amt.Amt ili:tid="ch.so.awa">
+        <SO_AGI_Metadaten_20250202:Name>Amt für Wirtschaft und Arbeit</SO_AGI_Metadaten_20250202:Name>
+        <SO_AGI_Metadaten_20250202:Abkuerzung>AWA</SO_AGI_Metadaten_20250202:Abkuerzung>
+        <SO_AGI_Metadaten_20250202:AmtImWeb>https://awa.so.ch</SO_AGI_Metadaten_20250202:AmtImWeb>
+        <SO_AGI_Metadaten_20250202:Strasse>Untere Sternengasse</SO_AGI_Metadaten_20250202:Strasse>
+        <SO_AGI_Metadaten_20250202:Hausnr>2</SO_AGI_Metadaten_20250202:Hausnr>
+        <SO_AGI_Metadaten_20250202:PLZ>4509</SO_AGI_Metadaten_20250202:PLZ>
+        <SO_AGI_Metadaten_20250202:Ort>Solothurn</SO_AGI_Metadaten_20250202:Ort>
+      </SO_AGI_Metadaten_20250202:Amt.Amt>
+      <SO_AGI_Metadaten_20250202:Amt.Amt ili:tid="ch.so.agi">
+        <SO_AGI_Metadaten_20250202:Name>Amt für Geoinformation</SO_AGI_Metadaten_20250202:Name>
+        <SO_AGI_Metadaten_20250202:Abkuerzung>AGI</SO_AGI_Metadaten_20250202:Abkuerzung>
+        <SO_AGI_Metadaten_20250202:AmtImWeb>https://agi.so.ch</SO_AGI_Metadaten_20250202:AmtImWeb>
+        <SO_AGI_Metadaten_20250202:Strasse>Rötistrasse</SO_AGI_Metadaten_20250202:Strasse>
+        <SO_AGI_Metadaten_20250202:Hausnr>4</SO_AGI_Metadaten_20250202:Hausnr>
+        <SO_AGI_Metadaten_20250202:PLZ>4502</SO_AGI_Metadaten_20250202:PLZ>
+        <SO_AGI_Metadaten_20250202:Ort>Solothurn</SO_AGI_Metadaten_20250202:Ort>
+      </SO_AGI_Metadaten_20250202:Amt.Amt>
+    </SO_AGI_Metadaten_20250202:Amt>
+  </ili:datasection>
+</ili:transfer>

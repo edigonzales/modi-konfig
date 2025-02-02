@@ -1,0 +1,126 @@
+INTERLIS 2.4;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2025-02-02 | sz  | Ersterfassung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+
+MODEL SO_AGI_Metadaten_20250202 (de)
+AT "https://agi.so.ch"
+VERSION "2025-02-02" =
+  DOMAIN
+
+    SOOID = OID TEXT*255;
+
+!!   STRUCTURE ModelLink =
+!!     name : MANDATORY TEXT;  !! Name or Namespace
+!!     locationHint : URI; !! repo
+!!     versionHint : TEXT;
+!!   END ModelLink;
+
+  STRUCTURE Amt_ =
+    Name : MANDATORY TEXT;
+    Abkuerzung : TEXT*10;
+    Abteilung : TEXT;
+    AmtImWeb : MANDATORY URI;
+    Zeile1 : TEXT*50;
+    Zeile2 : TEXT*50;
+    Strasse : MANDATORY TEXT*50;
+    Hausnr : MANDATORY TEXT*10;
+    PLZ : MANDATORY TEXT*4;
+    Ort : MANDATORY TEXT*100;
+  END Amt_;
+
+!!   STRUCTURE FileFormat = 
+!!     name: MANDATORY TEXT;
+!!     abbreviation: MANDATORY TEXT;
+!!     mimeType: MANDATORY TEXT;
+!!     extension: MANDATORY TEXT;
+!!   END FileFormat;
+
+!!   STRUCTURE AttributeDescription = 
+!!     name : TEXT; !! So wie er im Modell steht.
+!!     shortDescription : MTEXT; !! Aus ilidoc-Kommentar.
+!!     dataType : TEXT;
+!!     isMandatory : BOOLEAN;
+!!   END AttributeDescription;
+
+!!   STRUCTURE ClassDescription = 
+!!     name : TEXT; !! Entspricht originalem Klassennamen.
+!!     title : TEXT; !! Aus Metaattribut "title" falls vorhanden. Oder aus TOML-Datei.
+!!     shortDescription : MTEXT; !! Aus ilidoc-Kommentar.
+!!     attributeDescription : BAG {0..*} OF SO_AGI_Metadaten_20250202.AttributeDescription;
+!!   END ClassDescription;
+
+!!   STRUCTURE Item = 
+!!     identifier : MANDATORY TEXT;
+!!     title : MANDATORY TEXT;
+!!     lastPublishingDate : MANDATORY FORMAT INTERLIS.XMLDate "1990-1-1" .. "2100-12-31";
+!!     secondToLastPublishingDate : FORMAT INTERLIS.XMLDate "1990-1-1" .. "2100-12-31";
+!!     boundary : BoundingBox;
+!!     !! geometry TODO: erst bei stac api
+!!   END Item;
+
+  TOPIC Amt =
+    OID AS SO_AGI_Metadaten_20250202.SOOID;
+
+    CLASS Amt EXTENDS SO_AGI_Metadaten_20250202.Amt_ = 
+      UNIQUE Abkuerzung, Abteilung;
+    END Amt;
+  END Amt;
+
+  TOPIC Datensaetze =
+    OID AS SO_AGI_Metadaten_20250202.SOOID;
+
+    CLASS Datensatz =
+        ID : MANDATORY TEXT*100;
+        Titel : MANDATORY TEXT*200;
+        Beschreibung : TEXT*2000;
+        !!@ili2db.mapping=JSON
+        Datenherr : MANDATORY SO_AGI_Metadaten_20250202.Amt_;
+        Modell : TEXT*100;
+        !!@ili2db.mapping=JSON
+        Tags : BAG {0..*} OF TEXT*100;
+    END Datensatz;
+
+  END Datensaetze;
+
+!!   TOPIC FileFormats = 
+!!     OID AS SO_AGI_Metadaten_20250202.SOOID;
+
+!!     CLASS FileFormat EXTENDS SO_AGI_Metadaten_20250202.FileFormat = 
+!!       UNIQUE name;
+!!     END FileFormat;
+!!   END FileFormats;
+
+
+!!   TOPIC ThemePublications =
+
+!!     CLASS ThemePublication =
+!!       identifier : MANDATORY TEXT;
+!!       model : SO_AGI_Metadaten_20250202.ModelLink;
+!!       lastPublishingDate : MANDATORY FORMAT INTERLIS.XMLDate "1990-1-1" .. "2100-12-31";
+!!       secondToLastPublishingDate : FORMAT INTERLIS.XMLDate "1990-1-1" .. "2100-12-31";
+!!       title : MANDATORY TEXT;
+!!       shortDescription : MTEXT;
+!!       licence : MANDATORY URI;
+!!       furtherInformation : URI;
+!!       keywords : TEXT;
+!!       synonyms : TEXT;
+!!       owner : MANDATORY SO_AGI_Metadaten_20250202.Amt_;
+!!       servicer : MANDATORY SO_AGI_Metadaten_20250202.Amt_;
+!!       boundary : MANDATORY BoundingBox;
+!!       items : BAG {1..*} OF SO_AGI_Metadaten_20250202.Item;
+!!       fileFormats : BAG {1..*} OF SO_AGI_Metadaten_20250202.FileFormat;
+!!       downloadHostUrl : MANDATORY URI;
+!!       classDescription : BAG {0..*} OF SO_AGI_Metadaten_20250202.ClassDescription;
+
+!!       UNIQUE identifier;
+!!     END ThemePublication;
+
+!!   END ThemePublications;
+
+END SO_AGI_Metadaten_20250202.
