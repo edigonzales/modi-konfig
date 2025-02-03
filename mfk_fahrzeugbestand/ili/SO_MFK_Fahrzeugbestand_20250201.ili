@@ -1,0 +1,46 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2025-02-01 | sz  | Initialerstellung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+!!@ furtherInformation=https://geo.so.ch/models/MFK/SO_MFK_Fahrzeugbestand_20250201.uml
+!!@ shortDescription="Fahrzeugbestand im Kanton Solothurn pro Jahr, Bezirk und Kategorie"
+!!@ title="Fahrzeugbestand im Kanton Solothurn"
+MODEL SO_MFK_Fahrzeugbestand_20250201 (de)
+AT "https://mfk.so.ch"
+VERSION "2025-02-01"  =
+
+  TOPIC Fahrzeugbestand =
+
+    /** Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+     */
+    CLASS Fahrzeugbestand =
+      /** Jahr der Datenerhebung
+       */
+      jahr : MANDATORY 1990..2100;
+      /** Bezirk 
+       */
+      bezirk : MANDATORY TEXT*50;
+      /** Abkürzung Kanton
+       */
+      kanton : MANDATORY TEXT*2;
+      /** Fahrzeugtyp
+       */
+      typ : MANDATORY TEXT*50;
+      /** Anzahl Fahrzeuge
+       */
+      anzahl : MANDATORY 0..1000000;
+      !! Enumeration-Ersatz 
+      !!@ name = "CheckNameBezirk"
+      !!@ ilivalid.msg = "Name des Bezirks ist falsch: '{bezirk}'." 
+      MANDATORY CONSTRAINT bezirk=="Bucheggberg" OR bezirk=="Dorneck" OR bezirk=="Gäu" OR bezirk=="Gösgen"  OR bezirk=="Lebern" OR bezirk=="Olten" OR bezirk=="Solothurn" OR bezirk=="Thal" OR bezirk=="Thierstein" OR bezirk=="Wasseramt";
+
+    END Fahrzeugbestand;
+
+  END Fahrzeugbestand;
+
+END SO_MFK_Fahrzeugbestand_20250201.

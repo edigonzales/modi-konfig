@@ -1,0 +1,16 @@
+{
+    "@type" : "XX_SO_AGI_Metadaten_20250202.Metadaten.Datensatz",
+    "ID" : "ch.so.agi.av_umsatz",
+    "Titel" : "Umsätze in der amtlichen Vermessung",
+    "Beschreibung" : "Umsätze (Anzahl Gebäude- und Grundstücksmutationen, Umsatz in CHF) in der laufenden Nachführung der amtlichen Vermessung. Daten seit 1983.",
+    "Datenherr" : "ch.so.agi",
+    "Modell" : "SO_AGI_AV_Umsatz_20250203",
+    "Tags" : [
+        "Umsatz",
+        "Gebäude",
+        "Nachführung",
+        "AV",
+        "Amtliche Vermessung",
+        "Anzahl"
+    ] 
+}

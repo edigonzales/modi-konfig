@@ -1,0 +1,39 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2025-02-03 | sz  | Initialerstellung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+!!@ furtherInformation=https://geo.so.ch/models/AGI/SO_AGI_AV_Umsatz_20250203.uml
+!!@ shortDescription="Lorem Ipsum"
+!!@ title="Lorem Ipsum"
+MODEL SO_AGI_AV_Umsatz_20250203 (de)
+AT "https://agi.so.ch"
+VERSION "2025-02-03"  =
+
+  TOPIC Umsatz =
+
+    /** Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+     */
+    CLASS Umsatz =
+      /** Jahr der Datenerhebung
+       */
+      jahr : MANDATORY 1990..2100;
+      /** Anzahl Grenzmutationen 
+       */
+       anzahl_grenzmutationen : MANDATORY 0..10000;
+      /** Anzahl Gebäudemutationen 
+       */
+       anzahl_gebaeudemutationen : MANDATORY 0..10000;
+      /** Gesamtumsatz in der laufenden Nachführung in CHF. 
+       */
+       umsatz_in_chf : MANDATORY 0..100000000;
+
+    END Umsatz;
+
+  END Umsatz;
+
+END SO_AGI_AV_Umsatz_20250203.

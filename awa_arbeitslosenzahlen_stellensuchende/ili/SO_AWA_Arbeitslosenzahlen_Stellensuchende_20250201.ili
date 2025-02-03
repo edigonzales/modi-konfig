@@ -1,0 +1,37 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2025-02-01 | sz  | Initialerstellung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+!!@ furtherInformation=https://geo.so.ch/models/AWA/SO_AWA_Arbeitslosenzahlen_Stellensuchende_20250201.uml
+!!@ shortDescription="Lorem Ipsum ..."
+!!@ title="Lorem Ipsum im Kanton Solothurn"
+MODEL SO_AWA_Arbeitslosenzahlen_Stellensuchende_20250201 (de)
+AT "https://awa.so.ch"
+VERSION "2025-02-01"  =
+
+  TOPIC Arbeitslosenzahlen =
+
+    /** Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+     */
+    CLASS Stellensuchende =
+      /** Jahr der Datenerhebung
+       */
+      jahr : MANDATORY 1990..2100;
+      /** Stellensuchende-Kategorie: Männer, Frauen, CH-Bürger, Ausländer. Wobei Männer+Frauen == CH-Bürger+Ausländer.
+       */
+      kategorie : MANDATORY TEXT*100;
+      /** Anzahl Stellensuchende
+       */
+      anzahl : MANDATORY 0..100000;
+      !! TODO Constraint: Summe Männer+Frauen == CH+Ausländer pro Jahr
+
+    END Stellensuchende;
+
+  END Arbeitslosenzahlen;
+
+END SO_AWA_Arbeitslosenzahlen_Stellensuchende_20250201.

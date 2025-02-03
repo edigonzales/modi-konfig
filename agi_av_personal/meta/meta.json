@@ -1,0 +1,16 @@
+{
+    "@type" : "XX_SO_AGI_Metadaten_20250202.Metadaten.Datensatz",
+    "ID" : "ch.so.agi.av_personal",
+    "Titel" : "Personal in der amtlichen Vermessung",
+    "Beschreibung" : "Eingesetztes Personal in der amtlichen Vermessung. Kategorisiert in verschiedene Gruppen. Daten seit 1983.",
+    "Datenherr" : "ch.so.agi",
+    "Modell" : "SO_AGI_AV_Personal_20250203",
+    "Tags" : [
+        "Personal",
+        "Bestand",
+        "Nachführung",
+        "AV",
+        "Amtliche Vermessung",
+        "Anzahl"
+    ] 
+}

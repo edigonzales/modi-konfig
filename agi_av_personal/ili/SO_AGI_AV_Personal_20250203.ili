@@ -1,0 +1,42 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2025-02-03 | sz  | Initialerstellung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+!!@ furtherInformation=https://geo.so.ch/models/AGI/SO_AGI_AV_Personal_20250203.uml
+!!@ shortDescription="Lorem Ipsum"
+!!@ title="Lorem Ipsum"
+MODEL SO_AGI_AV_Personal_20250203 (de)
+AT "https://agi.so.ch"
+VERSION "2025-02-03"  =
+
+  TOPIC Personal =
+
+    /** Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+     */
+    CLASS Personal =
+      /** Jahr der Datenerhebung
+       */
+      jahr : MANDATORY 1990..2100;
+      /** Ingenieur-Geometer 
+       */
+      ingenieur_geometer : MANDATORY 0..100;
+      /** Ingenieur HF und Geomatik-Techniker 
+       */
+      ingenieur_fh_techniker : MANDATORY 0..100;
+      /** Geomatiker 
+       */
+      geomatiker : MANDATORY 0..100;
+      /** Lernende 
+       */
+      lernende : MANDATORY 0..100;
+
+    END Personal;
+
+  END Personal;
+
+END SO_AGI_AV_Personal_20250203.
