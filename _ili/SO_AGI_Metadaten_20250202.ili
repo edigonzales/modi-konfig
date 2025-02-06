@@ -79,11 +79,12 @@ VERSION "2025-02-02" =
         ID : MANDATORY TEXT*100;
         Titel : MANDATORY TEXT*200;
         Beschreibung : TEXT*2000;
-        !!@ili2db.mapping=JSON
+        !! !!@ili2db.mapping=JSON
         Datenherr : MANDATORY SO_AGI_Metadaten_20250202.Amt_;
         Modell : TEXT*100;
-        !!@ili2db.mapping=JSON
+        !! !!@ili2db.mapping=JSON
         Tags : BAG {0..*} OF TEXT*100;
+        UNIQUE ID;
     END Datensatz;
 
   END Datensaetze;
