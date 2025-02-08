@@ -8,10 +8,10 @@ apply plugin: 'de.undercouch.download'
 
 defaultTasks 'foo'
 
-def awsAccessKey = System.getenv("AWS_ACCESS_KEY_ID")
-def awsSecretAccessKey = System.getenv("AWS_SECRET_ACCESS_KEY")
-def awsRegion = System.getenv("AWS_DEFAULT_REGION")
-def awsEndpoint = System.getenv("AWS_ENDPOINT_URL")
+//def awsAccessKey = System.getenv("AWS_ACCESS_KEY_ID")
+//def awsSecretAccessKey = System.getenv("AWS_SECRET_ACCESS_KEY")
+//def awsRegion = System.getenv("AWS_DEFAULT_REGION")
+//def awsEndpoint = System.getenv("AWS_ENDPOINT_URL")
 
 tasks.register('foo') {
     doLast {
