@@ -1,0 +1,57 @@
+import java.nio.file.Paths
+import ch.so.agi.gretl.tasks.*
+import ch.so.agi.gretl.api.*
+import de.undercouch.gradle.tasks.download.Download
+
+apply plugin: 'ch.so.agi.gretl'
+apply plugin: 'de.undercouch.download'
+
+defaultTasks 'foo'
+
+def awsAccessKey = System.getenv("AWS_ACCESS_KEY_ID")
+def awsSecretAccessKey = System.getenv("AWS_SECRET_ACCESS_KEY")
+def awsRegion = System.getenv("AWS_DEFAULT_REGION")
+def awsEndpoint = System.getenv("AWS_ENDPOINT_URL")
+
+tasks.register('foo') {
+    doLast {
+        println 'Hallo Welt.'
+        println awsAccessKey
+    }
+}
+
+tasks.register("createStammdatenSchema", Ili2duckdbImportSchema) {
+    dbfile = file("modi_konfig.duckdb")
+    models = "SO_AGI_Metadaten_20250202"
+    modeldir = rootProject.projectDir.toString() + "/../../_ili/" + ";http://models.interlis.ch"
+    dbschema = "stammdaten"
+}
+
+tasks.register("importStammdaten", Ili2duckdbImport) {
+
+    dbfile = file("modi_konfig.duckdb")
+    models = "SO_AGI_Metadaten_20250202"
+    modeldir = rootProject.projectDir.toString() + "/../../_ili/" + ";http://models.interlis.ch"
+    dbschema = "stammdaten"
+    dataFile = file("../../_stammdaten/amt.xtf")
+}
+
+tasks.register("createKonfigSchema", Ili2duckdbImportSchema) {
+
+    dbfile = file("modi_konfig.duckdb")
+    models = "SO_AGI_Metadaten_20250202"
+    modeldir = rootProject.projectDir.toString() + "/../../_ili/" + ";http://models.interlis.ch"
+    dbschema = "konfig"
+}
+
+def pwd = rootProject.projectDir.toString()
+def dbUri = "jdbc:duckdb:modi_konfig.duckdb".toString()
+def dbUser = ""
+def dbPass = ""
+
+tasks.register("createKonfigData", SqlExecutor) {
+
+    database = [dbUri, dbUser, dbPass]
+    sqlFiles = ['create_konfig_data.sql']
+
+}

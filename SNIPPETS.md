@@ -36,34 +36,39 @@ java -jar /Users/stefan/apps/ili2duckdb-5.2.2-SNAPSHOT/ili2duckdb-5.2.2-SNAPSHOT
 
 ```
 DROP TABLE IF EXISTS
-    datensatz_tmp
+    themapublikation_tmp
 ;
-CREATE TEMP TABLE datensatz_tmp AS 
+CREATE TEMP TABLE themapublikation_tmp AS 
 SELECT
     nextval('konfig.t_ili2db_seq') AS T_Id,
     '_' || nextval('konfig.t_ili2db_seq') AS T_Ili_Tid,
-    ID AS id,
-    Titel AS titel,
-    Beschreibung AS beschreibung,
-    Modell AS modell,
-    tags,
-    datenherr
+    m.ID AS id,
+    m.Titel AS titel,
+    m.Beschreibung AS beschreibung,
+    m.Modell AS modell,
+    m.tags,
+    m.datenherr,
+    p.publiziertAm AS publiziertAm
 FROM 
-    read_json('/Users/stefan/sources/modi-konfig/*/meta/meta.json')
+    read_json('/Users/stefan/sources/modi-konfig/*/meta/meta.json') AS m
+    LEFT JOIN read_json('s3://ch.so.agi.fubar1/*/publishedat.json') AS p
+    ON m.ID = p.ID
 ;
-  
+
 DELETE FROM
-    konfig.datensaetze_datensatz
+    konfig.themapublikation_themapublikation
 ;
 INSERT INTO 
-    konfig.datensaetze_datensatz
+    konfig.themapublikation_themapublikation
     (
         T_Id,
         T_Ili_Tid,
         id,
         titel,
         beschreibung,
-        modell
+        modell,
+        tags,
+        publiziertam
     )
 SELECT 
     T_Id,
@@ -71,11 +76,12 @@ SELECT
     id,
     titel,
     beschreibung,
-    modell
+    modell,
+    list_aggregate(tags, 'string_agg', ',') AS tags,
+    publiziertam
 FROM 
-    datensatz_tmp
+    themapublikation_tmp 
 ;
-
 
 DELETE FROM 
     konfig.amt_
@@ -95,7 +101,7 @@ INSERT INTO
         hausnr,
         plz,
         ort,
-        datensaetze_datensatz_datenherr
+        thempblktn_thmpblktion_datenherr
     )
 SELECT 
     nextval('konfig.t_ili2db_seq') AS T_Id,
@@ -110,13 +116,15 @@ SELECT
     hausnr,
     plz,
     ort,
-    datensatz_tmp.T_Id AS datensaetze_datensatz_datenherr
+    themapublikation_tmp.T_Id AS thempblktn_thmpblktion_datenherr
 FROM 
-    datensatz_tmp
+    themapublikation_tmp
     LEFT JOIN stammdaten.amt_amt AS amt 
-    ON datensatz_tmp.datenherr = amt.T_Ili_Tid 
+    ON themapublikation_tmp.datenherr = amt.T_Ili_Tid 
 ;
 
+
+/*
 DELETE FROM 
     konfig.datensaetze_datensatz_tags
 ;
@@ -134,9 +142,13 @@ SELECT
 FROM 
     datensatz_tmp
 ;
+*/
 ```
 
 ```
 java -jar /Users/stefan/apps/ili2duckdb-5.2.2-SNAPSHOT/ili2duckdb-5.2.2-SNAPSHOT.jar --dbfile modi-konfig.duckdb --nameByTopic --defaultSrsCode 2056 --models SO_AGI_Metadaten_20250202 --modeldir _ili --dbschema konfig --disableValidation --export modi_konfig.xtf
 
 ```
+
+
+docker run -i --rm --name gretl --entrypoint="/bin/sh" -u $UID -v $PWD:/home/gradle/project -v /tmp:/home/gradle/.gradle/caches sogis/gretl:3.1 -c 'gretl'

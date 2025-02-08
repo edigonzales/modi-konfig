@@ -1,0 +1,20 @@
+name: thema_publikation
+
+on:
+  push
+
+jobs:  
+
+  build:
+
+    runs-on: ubuntu-latest
+
+1    container:
+      image: sogis/gretl:3.1
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run GRETL job
+        run: |
+          gradle -b _gretl/thema_publikation/build.gradle --init-script /home/gradle/init.gradle --no-daemon

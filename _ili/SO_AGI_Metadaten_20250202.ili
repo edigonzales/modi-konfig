@@ -72,22 +72,24 @@ VERSION "2025-02-02" =
     END Amt;
   END Amt;
 
-  TOPIC Datensaetze =
+  TOPIC ThemaPublikation =
     OID AS SO_AGI_Metadaten_20250202.SOOID;
 
-    CLASS Datensatz =
+    CLASS ThemaPublikation =
         ID : MANDATORY TEXT*100;
         Titel : MANDATORY TEXT*200;
         Beschreibung : TEXT*2000;
         !! !!@ili2db.mapping=JSON
         Datenherr : MANDATORY SO_AGI_Metadaten_20250202.Amt_;
         Modell : TEXT*100;
+        publiziertAm : INTERLIS.XMLDate;
         !! !!@ili2db.mapping=JSON
-        Tags : BAG {0..*} OF TEXT*100;
+        !!Tags : BAG {0..*} OF TEXT*100;
+        Tags : TEXT;
         UNIQUE ID;
-    END Datensatz;
+    END ThemaPublikation;
 
-  END Datensaetze;
+  END ThemaPublikation;
 
 !!   TOPIC FileFormats = 
 !!     OID AS SO_AGI_Metadaten_20250202.SOOID;

@@ -4,36 +4,13 @@
     <ili:models>
       <ili:model>SO_AGI_Metadaten_20250202</ili:model>
     </ili:models>
-    <ili:sender>ili2duckdb-5.2.2-SNAPSHOT-4d47dd476faf576bc56fa9143f49f62996471a9a</ili:sender>
+    <ili:sender>ili2duckdb-5.2.2-SNAPSHOT-0c4cb83a8167af128dfb526b0a300e0402104667</ili:sender>
   </ili:headersection>
   <ili:datasection>
     <SO_AGI_Metadaten_20250202:Amt ili:bid="SO_AGI_Metadaten_20250202.Amt">
 </SO_AGI_Metadaten_20250202:Amt>
-    <SO_AGI_Metadaten_20250202:Datensaetze ili:bid="SO_AGI_Metadaten_20250202.Datensaetze">
-      <SO_AGI_Metadaten_20250202:Datensatz ili:tid="_134">
-        <SO_AGI_Metadaten_20250202:ID>ch.so.agi.av_personal</SO_AGI_Metadaten_20250202:ID>
-        <SO_AGI_Metadaten_20250202:Titel>Personal in der amtlichen Vermessung</SO_AGI_Metadaten_20250202:Titel>
-        <SO_AGI_Metadaten_20250202:Beschreibung>Eingesetztes Personal in der amtlichen Vermessung. Kategorisiert in verschiedene Gruppen. Daten seit 1983.</SO_AGI_Metadaten_20250202:Beschreibung>
-        <SO_AGI_Metadaten_20250202:Datenherr>
-          <SO_AGI_Metadaten_20250202:Amt_>
-            <SO_AGI_Metadaten_20250202:Name>Amt für Geoinformation</SO_AGI_Metadaten_20250202:Name>
-            <SO_AGI_Metadaten_20250202:Abkuerzung>AGI</SO_AGI_Metadaten_20250202:Abkuerzung>
-            <SO_AGI_Metadaten_20250202:AmtImWeb>https://agi.so.ch</SO_AGI_Metadaten_20250202:AmtImWeb>
-            <SO_AGI_Metadaten_20250202:Strasse>Rötistrasse</SO_AGI_Metadaten_20250202:Strasse>
-            <SO_AGI_Metadaten_20250202:Hausnr>4</SO_AGI_Metadaten_20250202:Hausnr>
-            <SO_AGI_Metadaten_20250202:PLZ>4502</SO_AGI_Metadaten_20250202:PLZ>
-            <SO_AGI_Metadaten_20250202:Ort>Solothurn</SO_AGI_Metadaten_20250202:Ort>
-          </SO_AGI_Metadaten_20250202:Amt_>
-        </SO_AGI_Metadaten_20250202:Datenherr>
-        <SO_AGI_Metadaten_20250202:Modell>SO_AGI_AV_Personal_20250203</SO_AGI_Metadaten_20250202:Modell>
-        <SO_AGI_Metadaten_20250202:Tags>Personal</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Bestand</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Nachführung</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>AV</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Amtliche Vermessung</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Anzahl</SO_AGI_Metadaten_20250202:Tags>
-      </SO_AGI_Metadaten_20250202:Datensatz>
-      <SO_AGI_Metadaten_20250202:Datensatz ili:tid="_136">
+    <SO_AGI_Metadaten_20250202:ThemaPublikation ili:bid="SO_AGI_Metadaten_20250202.ThemaPublikation">
+      <SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation ili:tid="_42">
         <SO_AGI_Metadaten_20250202:ID>ch.so.agi.av_umsatz</SO_AGI_Metadaten_20250202:ID>
         <SO_AGI_Metadaten_20250202:Titel>Umsätze in der amtlichen Vermessung</SO_AGI_Metadaten_20250202:Titel>
         <SO_AGI_Metadaten_20250202:Beschreibung>Umsätze (Anzahl Gebäude- und Grundstücksmutationen, Umsatz in CHF) in der laufenden Nachführung der amtlichen Vermessung. Daten seit 1983.</SO_AGI_Metadaten_20250202:Beschreibung>
@@ -49,34 +26,29 @@
           </SO_AGI_Metadaten_20250202:Amt_>
         </SO_AGI_Metadaten_20250202:Datenherr>
         <SO_AGI_Metadaten_20250202:Modell>SO_AGI_AV_Umsatz_20250203</SO_AGI_Metadaten_20250202:Modell>
-        <SO_AGI_Metadaten_20250202:Tags>Umsatz</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Gebäude</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Nachführung</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>AV</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Amtliche Vermessung</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Anzahl</SO_AGI_Metadaten_20250202:Tags>
-      </SO_AGI_Metadaten_20250202:Datensatz>
-      <SO_AGI_Metadaten_20250202:Datensatz ili:tid="_138">
-        <SO_AGI_Metadaten_20250202:ID>ch.so.mfk.fahrzeugbestand</SO_AGI_Metadaten_20250202:ID>
-        <SO_AGI_Metadaten_20250202:Titel>Stellensuchende (Arbeitslosenzahlen)</SO_AGI_Metadaten_20250202:Titel>
-        <SO_AGI_Metadaten_20250202:Beschreibung>Stellensuchende (pro Jahr) nach Geschlecht, Staatszugehörigkeit und Alter. Seit 2004, wird jährlich nachgefgeführt.</SO_AGI_Metadaten_20250202:Beschreibung>
+        <SO_AGI_Metadaten_20250202:publiziertAm>2024-10-19</SO_AGI_Metadaten_20250202:publiziertAm>
+        <SO_AGI_Metadaten_20250202:Tags>Umsatz,Gebäude,Nachführung,AV,Amtliche Vermessung,Anzahl</SO_AGI_Metadaten_20250202:Tags>
+      </SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation>
+      <SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation ili:tid="_46">
+        <SO_AGI_Metadaten_20250202:ID>ch.so.agi.av_personal</SO_AGI_Metadaten_20250202:ID>
+        <SO_AGI_Metadaten_20250202:Titel>Personal in der amtlichen Vermessung</SO_AGI_Metadaten_20250202:Titel>
+        <SO_AGI_Metadaten_20250202:Beschreibung>Eingesetztes Personal in der amtlichen Vermessung. Kategorisiert in verschiedene Gruppen. Daten seit 1983.</SO_AGI_Metadaten_20250202:Beschreibung>
         <SO_AGI_Metadaten_20250202:Datenherr>
           <SO_AGI_Metadaten_20250202:Amt_>
-            <SO_AGI_Metadaten_20250202:Name>Amt für Wirtschaft und Arbeit</SO_AGI_Metadaten_20250202:Name>
-            <SO_AGI_Metadaten_20250202:Abkuerzung>AWA</SO_AGI_Metadaten_20250202:Abkuerzung>
-            <SO_AGI_Metadaten_20250202:AmtImWeb>https://awa.so.ch</SO_AGI_Metadaten_20250202:AmtImWeb>
-            <SO_AGI_Metadaten_20250202:Strasse>Untere Sternengasse</SO_AGI_Metadaten_20250202:Strasse>
-            <SO_AGI_Metadaten_20250202:Hausnr>2</SO_AGI_Metadaten_20250202:Hausnr>
-            <SO_AGI_Metadaten_20250202:PLZ>4509</SO_AGI_Metadaten_20250202:PLZ>
+            <SO_AGI_Metadaten_20250202:Name>Amt für Geoinformation</SO_AGI_Metadaten_20250202:Name>
+            <SO_AGI_Metadaten_20250202:Abkuerzung>AGI</SO_AGI_Metadaten_20250202:Abkuerzung>
+            <SO_AGI_Metadaten_20250202:AmtImWeb>https://agi.so.ch</SO_AGI_Metadaten_20250202:AmtImWeb>
+            <SO_AGI_Metadaten_20250202:Strasse>Rötistrasse</SO_AGI_Metadaten_20250202:Strasse>
+            <SO_AGI_Metadaten_20250202:Hausnr>4</SO_AGI_Metadaten_20250202:Hausnr>
+            <SO_AGI_Metadaten_20250202:PLZ>4502</SO_AGI_Metadaten_20250202:PLZ>
             <SO_AGI_Metadaten_20250202:Ort>Solothurn</SO_AGI_Metadaten_20250202:Ort>
           </SO_AGI_Metadaten_20250202:Amt_>
         </SO_AGI_Metadaten_20250202:Datenherr>
-        <SO_AGI_Metadaten_20250202:Modell>SO_AWA_Arbeitslosenzahlen_Stellensuchende_20250201</SO_AGI_Metadaten_20250202:Modell>
-        <SO_AGI_Metadaten_20250202:Tags>arbeitslos</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Anzahl</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>stellensuchend</SO_AGI_Metadaten_20250202:Tags>
-      </SO_AGI_Metadaten_20250202:Datensatz>
-      <SO_AGI_Metadaten_20250202:Datensatz ili:tid="_140">
+        <SO_AGI_Metadaten_20250202:Modell>SO_AGI_AV_Personal_20250203</SO_AGI_Metadaten_20250202:Modell>
+        <SO_AGI_Metadaten_20250202:publiziertAm>2024-10-19</SO_AGI_Metadaten_20250202:publiziertAm>
+        <SO_AGI_Metadaten_20250202:Tags>Personal,Bestand,Nachführung,AV,Amtliche Vermessung,Anzahl</SO_AGI_Metadaten_20250202:Tags>
+      </SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation>
+      <SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation ili:tid="_48">
         <SO_AGI_Metadaten_20250202:ID>ch.so.mfk.fahrzeugbestand</SO_AGI_Metadaten_20250202:ID>
         <SO_AGI_Metadaten_20250202:Titel>Fahrzeugbestand</SO_AGI_Metadaten_20250202:Titel>
         <SO_AGI_Metadaten_20250202:Beschreibung>Fahrzeugbestand seit 1991 im Kanton Solothurn gruppiert in verschiedene Kategorien. Wird jährlich aktualisiert.</SO_AGI_Metadaten_20250202:Beschreibung>
@@ -92,13 +64,28 @@
           </SO_AGI_Metadaten_20250202:Amt_>
         </SO_AGI_Metadaten_20250202:Datenherr>
         <SO_AGI_Metadaten_20250202:Modell>SO_MFK_Fahrzeugbestand_20250201</SO_AGI_Metadaten_20250202:Modell>
-        <SO_AGI_Metadaten_20250202:Tags>Fahrzeug</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Bestand</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>PKW</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Auto</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Lastwagen</SO_AGI_Metadaten_20250202:Tags>
-        <SO_AGI_Metadaten_20250202:Tags>Anzahl</SO_AGI_Metadaten_20250202:Tags>
-      </SO_AGI_Metadaten_20250202:Datensatz>
-    </SO_AGI_Metadaten_20250202:Datensaetze>
+        <SO_AGI_Metadaten_20250202:publiziertAm>2025-01-07</SO_AGI_Metadaten_20250202:publiziertAm>
+        <SO_AGI_Metadaten_20250202:Tags>Fahrzeug,Bestand,PKW,Auto,Lastwagen,Anzahl</SO_AGI_Metadaten_20250202:Tags>
+      </SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation>
+      <SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation ili:tid="_44">
+        <SO_AGI_Metadaten_20250202:ID>ch.so.awa.arbeitslosenzahlen_stellensuchende</SO_AGI_Metadaten_20250202:ID>
+        <SO_AGI_Metadaten_20250202:Titel>Stellensuchende (Arbeitslosenzahlen)</SO_AGI_Metadaten_20250202:Titel>
+        <SO_AGI_Metadaten_20250202:Beschreibung>Stellensuchende (pro Jahr) nach Geschlecht, Staatszugehörigkeit und Alter. Seit 2004, wird jährlich nachgefgeführt.</SO_AGI_Metadaten_20250202:Beschreibung>
+        <SO_AGI_Metadaten_20250202:Datenherr>
+          <SO_AGI_Metadaten_20250202:Amt_>
+            <SO_AGI_Metadaten_20250202:Name>Amt für Wirtschaft und Arbeit</SO_AGI_Metadaten_20250202:Name>
+            <SO_AGI_Metadaten_20250202:Abkuerzung>AWA</SO_AGI_Metadaten_20250202:Abkuerzung>
+            <SO_AGI_Metadaten_20250202:AmtImWeb>https://awa.so.ch</SO_AGI_Metadaten_20250202:AmtImWeb>
+            <SO_AGI_Metadaten_20250202:Strasse>Untere Sternengasse</SO_AGI_Metadaten_20250202:Strasse>
+            <SO_AGI_Metadaten_20250202:Hausnr>2</SO_AGI_Metadaten_20250202:Hausnr>
+            <SO_AGI_Metadaten_20250202:PLZ>4509</SO_AGI_Metadaten_20250202:PLZ>
+            <SO_AGI_Metadaten_20250202:Ort>Solothurn</SO_AGI_Metadaten_20250202:Ort>
+          </SO_AGI_Metadaten_20250202:Amt_>
+        </SO_AGI_Metadaten_20250202:Datenherr>
+        <SO_AGI_Metadaten_20250202:Modell>SO_AWA_Arbeitslosenzahlen_Stellensuchende_20250201</SO_AGI_Metadaten_20250202:Modell>
+        <SO_AGI_Metadaten_20250202:publiziertAm>2025-02-01</SO_AGI_Metadaten_20250202:publiziertAm>
+        <SO_AGI_Metadaten_20250202:Tags>arbeitslos,Anzahl,stellensuchend</SO_AGI_Metadaten_20250202:Tags>
+      </SO_AGI_Metadaten_20250202:ThemaPublikation.ThemaPublikation>
+    </SO_AGI_Metadaten_20250202:ThemaPublikation>
   </ili:datasection>
 </ili:transfer>
