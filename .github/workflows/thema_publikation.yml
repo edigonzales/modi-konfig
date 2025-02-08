@@ -23,4 +23,5 @@ jobs:
 
       - name: Run GRETL job
         run: |
-          gradle -b build.gradle --init-script /home/gradle/init.gradle --no-daemon
+          pwd
+          ls -la
