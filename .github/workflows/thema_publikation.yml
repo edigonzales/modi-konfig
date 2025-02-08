@@ -7,9 +7,15 @@ jobs:
 
   build:
 
+    env:
+      ORG_GRADLE_PROJECT_awsAccessKey: ${{secrets.AWS_ACCESS_KEY_ID}}
+      ORG_GRADLE_PROJECT_awsSecretAccessKey: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+      ORG_GRADLE_PROJECT_awsRegion: ${{secrets.AWS_DEFAULT_REGION}}
+      ORG_GRADLE_PROJECT_awsEndpoint: ${{secrets.AWS_ENDPOINT_URL}}
+
     runs-on: ubuntu-latest
 
-1    container:
+    container:
       image: sogis/gretl:3.1
 
     steps:
@@ -17,4 +23,4 @@ jobs:
 
       - name: Run GRETL job
         run: |
-          gradle -b _gretl/thema_publikation/build.gradle --init-script /home/gradle/init.gradle --no-daemon
+          gradle -b build.gradle --init-script /home/gradle/init.gradle --no-daemon
