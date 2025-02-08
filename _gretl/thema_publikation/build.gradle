@@ -28,7 +28,7 @@ tasks.register("createStammdatenSchema", Ili2duckdbImportSchema) {
 }
 
 tasks.register("importStammdaten", Ili2duckdbImport) {
-
+    dependsOn 'createStammdatenSchema'
     dbfile = file("modi_konfig.duckdb")
     models = "SO_AGI_Metadaten_20250202"
     modeldir = rootProject.projectDir.toString() + "/../../_ili/" + ";http://models.interlis.ch"
@@ -37,7 +37,7 @@ tasks.register("importStammdaten", Ili2duckdbImport) {
 }
 
 tasks.register("createKonfigSchema", Ili2duckdbImportSchema) {
-
+    dependsOn 'importStammdaten'
     dbfile = file("modi_konfig.duckdb")
     models = "SO_AGI_Metadaten_20250202"
     modeldir = rootProject.projectDir.toString() + "/../../_ili/" + ";http://models.interlis.ch"

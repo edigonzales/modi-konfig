@@ -25,4 +25,9 @@ jobs:
         run: |
           pwd
           ls -la
-          gradle -b _gretl/thema_publikation/build.gradle --init-script /home/gradle/init.gradle createStammdatenSchema --no-daemon
+          gradle -b _gretl/thema_publikation/build.gradle --init-script /home/gradle/init.gradle createKonfigSchema --no-daemon
+
+      - name: Debug 1
+        run: |
+          ls -la
+          ls -la _gretl/thema_publikation/
