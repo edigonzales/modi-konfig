@@ -50,7 +50,7 @@ SELECT
     m.datenherr,
     p.publiziertAm AS publiziertAm
 FROM 
-    read_json('/Users/stefan/sources/modi-konfig/*/meta/meta.json') AS m
+    read_json('/Users/stefan/sources/modi-konfig/*/meta/thema.json') AS m
     LEFT JOIN read_json('s3://ch.so.agi.fubar1/*/publishedat.json') AS p
     ON m.ID = p.ID
 ;

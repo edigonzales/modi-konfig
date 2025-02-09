@@ -72,6 +72,9 @@ VERSION "2025-02-02" =
     END Amt;
   END Amt;
 
+  !! Topic Medaten?
+  !! Klasse Thema? -> erweitern zu Themapublikation?
+
   TOPIC ThemaPublikation =
     OID AS SO_AGI_Metadaten_20250202.SOOID;
 

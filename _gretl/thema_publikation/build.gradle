@@ -85,4 +85,3 @@ tasks.register('uploadToExoscale', S3Upload) {
     bucketName = 'ch.so.agi.fubar1'
     acl = "public-read"
 }
-
