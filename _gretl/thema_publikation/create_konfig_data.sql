@@ -22,7 +22,7 @@ SELECT
 FROM
     -- Wo, welcher Pfad verwendet werden muss, wird bisschen mühsam.
     -- Vgl. build.gradle mit den Modelldateien.
-    read_json('*/meta/meta.json') AS m
+    read_json('*/meta/thema.json') AS m
     LEFT JOIN read_json('s3://ch.so.agi.fubar1/*/publishedat.json') AS p
     ON m.ID = p.ID
 ;
